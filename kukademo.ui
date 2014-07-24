@@ -1072,13 +1072,8 @@
        <height>68</height>
       </rect>
      </property>
-     <zorder>tabWidget</zorder>
-     <zorder>tabWidget</zorder>
     </widget>
    </widget>
-   <zorder>tabWidget</zorder>
-   <zorder>scrollArea</zorder>
-   <zorder>scrollArea</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menuBar">
@@ -1105,22 +1100,25 @@
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>true</bool>
+    <bool>false</bool>
    </attribute>
-   <addaction name="actionQ"/>
-   <addaction name="actionN"/>
+   <addaction name="actionConnect"/>
+   <addaction name="actionStartComponent"/>
   </widget>
-  <action name="actionQ">
+  <action name="actionConnect">
    <property name="text">
-    <string>Q</string>
+    <string>Connect</string>
+   </property>
+   <property name="toolTip">
+    <string>Connect to robot</string>
    </property>
   </action>
-  <action name="actionN">
+  <action name="actionStartComponent">
    <property name="checkable">
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>n</string>
+    <string>Start Component</string>
    </property>
   </action>
  </widget>
