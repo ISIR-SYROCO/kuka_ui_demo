@@ -28,16 +28,19 @@ ATI = dp:getPeer("ATI")
 
 app:__addmethod("connectRobot(bool)", function(self, checked)
     local connectRobot = window:findChild("actionConnect")
+    local lwr = dp:getPeer("lwr")
     if checked == true then
         print("Connect to robot")
         connected = true
         connectRobot:setText(Q"Connected")
+        lwr:start()
         dp:runScript("orocos/load_simple_demo.ops")
         kukademo = dp:getPeer("KukaDemo")
     else
         print("Disconnect")
         connected = false
         connectRobot:setText(Q"Connect")
+        lwr:stop()
         dp:runScript("orocos/unload_simple_demo.ops")
     end
 

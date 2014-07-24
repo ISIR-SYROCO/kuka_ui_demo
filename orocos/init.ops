@@ -8,4 +8,3 @@ lwr.local_port = 49938
 lwr.configure
 
 lwr.control_mode=7
-lwr.start
