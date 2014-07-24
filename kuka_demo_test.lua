@@ -19,20 +19,35 @@ uiloader = QUiLoader.new()
 window = uiloader:load(uifile)
 window:show()
 
-app:__addmethod("connectRobot()", function()
-    print("Connect to robot")
-    tc = rtt.getTC()
-    dp = tc:getPeer('Deployer')
-    dp:runScript("../kuka_simple_demo/orocos_script/kuka_demo.ops")
+tc = rtt.getTC()
+dp = tc:getPeer('Deployer')
+dp:runScript("orocos/init.ops")
+dp:import("ATISensor")
+dp:loadComponent("ATI", "ATISensor")
+ATI = dp:getPeer("ATI")
+
+app:__addmethod("connectRobot(bool)", function(self, checked)
+    local connectRobot = window:findChild("actionConnect")
+    if checked == true then
+        print("Connect to robot")
+        connected = true
+        connectRobot:setText(Q"Connected")
+        dp:runScript("orocos/load_simple_demo.ops")
+        kukademo = dp:getPeer("KukaDemo")
+    else
+        print("Disconnect")
+        connected = false
+        connectRobot:setText(Q"Connect")
+        dp:runScript("orocos/unload_simple_demo.ops")
+    end
+
+    --dp:runScript("../kuka_simple_demo/orocos_script/kuka_demo.ops")
     --dp:loadComponent('name','OCL::LuaComponent')
     --name = dp:getPeer('name')
     --name:exec_str('function updateHook() print(rtt.getTime()) end')
     --name:setPeriod(0.1)
     --name:configure()
     --name:start()
-    kukademo = dp:getPeer("KukaDemo")
-    ATI = dp:getPeer("ATI")
-    connected = true
 end)
  
 app:__addmethod("startJacobian()", function()
@@ -71,6 +86,19 @@ app:__addmethod("setCons()", function()
     pos_des:resize(3)
     pos_des:fromtab{Xdes_value:toDouble(), Ydes_value:toDouble(), Zdes_value:toDouble()}
     kukademo:setXcons(pos_des)
+end)
+
+app:__addmethod("startStop(bool)", function(self, checked)
+    if checked ==true then
+        --getPeriod
+        local period = window:findChild("period")
+        local period_value = period:text()
+        --sendPeriod to component
+        kukademo:setPeriod(period_value:toDouble())
+        kukademo:start()
+    else
+        kukademo:stop()
+    end
 end)
 
 app:__addmethod("Start()", function()
@@ -125,7 +153,11 @@ app:__addmethod("setTool()", function()
 end)
 
 connect_robot = window:findChild("actionConnect")
-connect_robot:connect('2triggered()', app, '1connectRobot()')
+connect_robot:connect('2toggled(bool)', app, '1connectRobot(bool)')
+
+start_component = window:findChild("actionStartComponent")
+start_component:connect('2toggled(bool)', app, '1startStop(bool)')
+
 jacobian_demo = window:findChild("Jacobian_button")
 jacobian_demo:connect('2clicked()', app, '1startJacobian()' )
 

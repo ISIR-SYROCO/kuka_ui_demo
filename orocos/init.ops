@@ -1,0 +1,11 @@
+import("lwr_fri")
+
+loadComponent("lwr", "lwr_fri::FRIRTNetComponent")
+
+setActivity("lwr", 0, 99, ORO_SCHED_RT)
+
+lwr.local_port = 49938
+lwr.configure
+
+lwr.control_mode=7
+lwr.start

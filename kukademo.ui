@@ -1106,6 +1106,9 @@
    <addaction name="actionStartComponent"/>
   </widget>
   <action name="actionConnect">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Connect</string>
    </property>
