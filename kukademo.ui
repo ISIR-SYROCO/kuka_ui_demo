@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1145</width>
-    <height>915</height>
+    <width>898</width>
+    <height>902</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>911</width>
-      <height>791</height>
+      <width>891</width>
+      <height>801</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -55,703 +55,671 @@
         <attribute name="title">
          <string>Main</string>
         </attribute>
-        <widget class="QWidget" name="gridLayoutWidget">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>10</y>
-           <width>881</width>
-           <height>781</height>
-          </rect>
-         </property>
-         <layout class="QGridLayout" name="gridLayout">
-          <item row="0" column="1">
-           <widget class="QGroupBox" name="groupBox_2">
-            <property name="title">
-             <string>Data</string>
-            </property>
-            <widget class="QWidget" name="gridLayoutWidget_8">
-             <property name="geometry">
-              <rect>
-               <x>50</x>
-               <y>60</y>
-               <width>301</width>
-               <height>141</height>
-              </rect>
+        <layout class="QGridLayout" name="gridLayout_9">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="1" column="1">
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="title">
+              <string>ATI Sensor</string>
              </property>
-             <layout class="QGridLayout" name="gridLayout_8">
-              <item row="0" column="1">
-               <widget class="QLabel" name="label_46">
-                <property name="text">
-                 <string>Ymes (m)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="2">
-               <widget class="QLabel" name="label_47">
-                <property name="text">
-                 <string>Zmes (m)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="label_45">
-                <property name="text">
-                 <string>Xmes (m)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLabel" name="Xee">
-                <property name="text">
-                 <string>Xee</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QLabel" name="Yee">
-                <property name="text">
-                 <string>Yee</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="2">
-               <widget class="QLabel" name="Zee">
-                <property name="text">
-                 <string>Zee</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
+             <widget class="QWidget" name="gridLayoutWidget_6">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>40</y>
+                <width>371</width>
+                <height>301</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_6">
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_21">
+                 <property name="text">
+                  <string>Fz</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QLabel" name="label_17">
+                 <property name="text">
+                  <string>Festx</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_13">
+                 <property name="text">
+                  <string>Fx</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QLabel" name="data_Fz">
+                 <property name="text">
+                  <string>data_Fz</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="label_23">
+                 <property name="text">
+                  <string>Tx</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLabel" name="data_Fx">
+                 <property name="text">
+                  <string>data_Fx</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_15">
+                 <property name="text">
+                  <string>Fy</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="2">
+                <widget class="QLabel" name="label_26">
+                 <property name="text">
+                  <string>Festz</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="3">
+                <widget class="QLabel" name="data_Festz">
+                 <property name="text">
+                  <string>data_Festz</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="0">
+                <widget class="QLabel" name="label_29">
+                 <property name="text">
+                  <string>Tz</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLabel" name="label_24">
+                 <property name="text">
+                  <string>Ty</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="0">
+                <widget class="QLabel" name="label_30">
+                 <property name="text">
+                  <string>||T||</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QPushButton" name="Calibration_button">
+                 <property name="text">
+                  <string>Calibration</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QLabel" name="data_normF">
+                 <property name="text">
+                  <string>data_normF</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLabel" name="data_Fy">
+                 <property name="text">
+                  <string>data_Fy</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2">
+                <widget class="QLabel" name="label_18">
+                 <property name="text">
+                  <string>Festy</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="QLabel" name="data_Festx">
+                 <property name="text">
+                  <string>data_Festx</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="3">
+                <widget class="QLabel" name="data_Festy">
+                 <property name="text">
+                  <string>data_Festy</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_22">
+                 <property name="text">
+                  <string>||F||</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="QLabel" name="data_Tx">
+                 <property name="text">
+                  <string>data_Tx</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="2">
+                <widget class="QLabel" name="label_32">
+                 <property name="text">
+                  <string>Testx</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="3">
+                <widget class="QLabel" name="data_Testx">
+                 <property name="text">
+                  <string>data_Testx</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1">
+                <widget class="QLabel" name="data_Ty">
+                 <property name="text">
+                  <string>data_Ty</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="2">
+                <widget class="QLabel" name="label_35">
+                 <property name="text">
+                  <string>Testy</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="2">
+                <widget class="QLabel" name="label_36">
+                 <property name="text">
+                  <string>||Fest||</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="3">
+                <widget class="QLabel" name="data_normFest">
+                 <property name="text">
+                  <string>data_normFest</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="3">
+                <widget class="QLabel" name="data_Testy">
+                 <property name="text">
+                  <string>data_Testy</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="1">
+                <widget class="QLabel" name="data_Tz">
+                 <property name="text">
+                  <string>data_Tz</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="2">
+                <widget class="QLabel" name="label_40">
+                 <property name="text">
+                  <string>Testz</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="3">
+                <widget class="QLabel" name="data_Testz">
+                 <property name="text">
+                  <string>data_Testz</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="1">
+                <widget class="QLabel" name="data_normT">
+                 <property name="text">
+                  <string>data_normT</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="2">
+                <widget class="QLabel" name="label_43">
+                 <property name="text">
+                  <string>||Test||</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="3">
+                <widget class="QLabel" name="data_normTest">
+                 <property name="text">
+                  <string>data_normTest</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </widget>
-            <widget class="QLabel" name="label_48">
-             <property name="geometry">
-              <rect>
-               <x>130</x>
-               <y>210</y>
-               <width>151</width>
-               <height>121</height>
-              </rect>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="title">
+              <string>Data</string>
              </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="pixmap">
-              <pixmap>lwr.jpg</pixmap>
-             </property>
-             <property name="scaledContents">
-              <bool>true</bool>
-             </property>
+             <widget class="QWidget" name="gridLayoutWidget_8">
+              <property name="geometry">
+               <rect>
+                <x>50</x>
+                <y>60</y>
+                <width>301</width>
+                <height>141</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_8">
+               <item row="0" column="1">
+                <widget class="QLabel" name="label_46">
+                 <property name="text">
+                  <string>Ymes (m)</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLabel" name="label_47">
+                 <property name="text">
+                  <string>Zmes (m)</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_45">
+                 <property name="text">
+                  <string>Xmes (m)</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="Xee">
+                 <property name="text">
+                  <string>Xee</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLabel" name="Yee">
+                 <property name="text">
+                  <string>Yee</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QLabel" name="Zee">
+                 <property name="text">
+                  <string>Zee</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QLabel" name="label_48">
+              <property name="geometry">
+               <rect>
+                <x>130</x>
+                <y>210</y>
+                <width>151</width>
+                <height>121</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>lwr.jpg</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
             </widget>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QGroupBox" name="groupBox_3">
-            <property name="title">
-             <string>FRI</string>
-            </property>
-            <widget class="QWidget" name="gridLayoutWidget_2">
-             <property name="geometry">
-              <rect>
-               <x>10</x>
-               <y>40</y>
-               <width>401</width>
-               <height>111</height>
-              </rect>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="title">
+              <string>FRI</string>
              </property>
-             <layout class="QGridLayout" name="gridLayout_2">
-              <item row="0" column="0">
-               <widget class="QPushButton" name="fri_cmd_button">
-                <property name="text">
-                 <string>FRI Command Mode</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QPushButton" name="fri_mon_button">
-                <property name="text">
-                 <string>FRI Monitor Mode</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
+             <widget class="QWidget" name="gridLayoutWidget_2">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>20</y>
+                <width>401</width>
+                <height>111</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_2">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="fri_cmd_button">
+                 <property name="text">
+                  <string>FRI Command Mode</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QPushButton" name="fri_mon_button">
+                 <property name="text">
+                  <string>FRI Monitor Mode</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="gridLayoutWidget_10">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>140</y>
+                <width>401</width>
+                <height>108</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_10">
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="stiffness">
+                 <property name="text">
+                  <string>250</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QPushButton" name="set_joint_impedance_button">
+                 <property name="text">
+                  <string>SetJointImpedance</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLabel" name="label_16">
+                 <property name="text">
+                  <string>Damping</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QLineEdit" name="damping">
+                 <property name="text">
+                  <string>0.1</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLabel" name="label_14">
+                 <property name="text">
+                  <string>Stiffness</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLabel" name="label_27">
+                 <property name="text">
+                  <string>Tool</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QPushButton" name="set_tool_button">
+                 <property name="text">
+                  <string>SetTool</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QLineEdit" name="settool"/>
+               </item>
+              </layout>
+             </widget>
             </widget>
-            <widget class="QWidget" name="gridLayoutWidget_10">
-             <property name="geometry">
-              <rect>
-               <x>10</x>
-               <y>170</y>
-               <width>401</width>
-               <height>108</height>
-              </rect>
+           </item>
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="groupBox">
+             <property name="title">
+              <string>Controller</string>
              </property>
-             <layout class="QGridLayout" name="gridLayout_10">
-              <item row="1" column="1">
-               <widget class="QLineEdit" name="stiffness">
-                <property name="text">
-                 <string>250</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QPushButton" name="set_joint_impedance_button">
-                <property name="text">
-                 <string>SetJointImpedance</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="2">
-               <widget class="QLabel" name="label_16">
-                <property name="text">
-                 <string>Damping</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="2">
-               <widget class="QLineEdit" name="damping">
-                <property name="text">
-                 <string>0.1</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QLabel" name="label_14">
-                <property name="text">
-                 <string>Stiffness</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <widget class="QLabel" name="label_27">
-                <property name="text">
-                 <string>Tool</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="0">
-               <widget class="QPushButton" name="set_tool_button">
-                <property name="text">
-                 <string>SetTool</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="1">
-               <widget class="QLineEdit" name="settool"/>
-              </item>
-             </layout>
+             <widget class="QWidget" name="gridLayoutWidget_3">
+              <property name="geometry">
+               <rect>
+                <x>60</x>
+                <y>30</y>
+                <width>303</width>
+                <height>131</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_3">
+               <item row="4" column="4">
+                <widget class="QPushButton" name="setkpkd_button">
+                 <property name="text">
+                  <string>SetKpKd</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="4">
+                <widget class="QPushButton" name="SetCons_button">
+                 <property name="text">
+                  <string>SetCons</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="QLabel" name="label_3">
+                 <property name="text">
+                  <string>Z (m)</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLineEdit" name="Xdes">
+                 <property name="text">
+                  <string>0.5</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="3">
+                <widget class="QLineEdit" name="Zdes">
+                 <property name="text">
+                  <string>0.5</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLabel" name="label">
+                 <property name="text">
+                  <string>X (m)</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLabel" name="label_2">
+                 <property name="text">
+                  <string>Y (m)</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2">
+                <widget class="QLineEdit" name="Ydes">
+                 <property name="text">
+                  <string>0.0</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="3">
+                <widget class="QLabel" name="label_20">
+                 <property name="text">
+                  <string>Kd</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="2">
+                <widget class="QLabel" name="label_19">
+                 <property name="text">
+                  <string>Kp</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="3">
+                <widget class="QLineEdit" name="kd">
+                 <property name="text">
+                  <string>0.1</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="2">
+                <widget class="QLineEdit" name="kp">
+                 <property name="text">
+                  <string>6</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLabel" name="currentXdes">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QLabel" name="currentYdes">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="QLabel" name="currentZdes">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="gridLayoutWidget_4">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>170</y>
+                <width>221</width>
+                <height>171</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_4">
+               <item row="1" column="0">
+                <widget class="QPushButton" name="SetControlMode_button">
+                 <property name="text">
+                  <string>SetControlMode</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_4">
+                 <property name="text">
+                  <string>Period (s)</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="period">
+                 <property name="text">
+                  <string>0.001</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="controlmode">
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="gridLayoutWidget_5">
+              <property name="geometry">
+               <rect>
+                <x>260</x>
+                <y>170</y>
+                <width>160</width>
+                <height>180</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_5">
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_8">
+                 <property name="text">
+                  <string>4 : Cartesian Position</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_5">
+                 <property name="text">
+                  <string>1 : Joint Position</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>2 : Joint Velocity</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string>6 : Cartesian Twist</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="0">
+                <widget class="QLabel" name="label_11">
+                 <property name="text">
+                  <string>7 : Joint Impedance</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_7">
+                 <property name="text">
+                  <string>3 : Joint Torque</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="label_9">
+                 <property name="text">
+                  <string>5 : Cartesian Force</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_12">
+                 <property name="text">
+                  <string>Control Mode</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </widget>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QGroupBox" name="groupBox_4">
-            <property name="title">
-             <string>ATI Sensor</string>
-            </property>
-            <widget class="QWidget" name="gridLayoutWidget_6">
-             <property name="geometry">
-              <rect>
-               <x>20</x>
-               <y>40</y>
-               <width>371</width>
-               <height>301</height>
-              </rect>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_6">
-              <item row="3" column="0">
-               <widget class="QLabel" name="label_21">
-                <property name="text">
-                 <string>Fz</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="2">
-               <widget class="QLabel" name="label_17">
-                <property name="text">
-                 <string>Festx</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLabel" name="label_13">
-                <property name="text">
-                 <string>Fx</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="1">
-               <widget class="QLabel" name="data_Fz">
-                <property name="text">
-                 <string>data_Fz</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="0">
-               <widget class="QLabel" name="label_23">
-                <property name="text">
-                 <string>Tx</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QLabel" name="data_Fx">
-                <property name="text">
-                 <string>data_Fx</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="0">
-               <widget class="QLabel" name="label_15">
-                <property name="text">
-                 <string>Fy</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="2">
-               <widget class="QLabel" name="label_26">
-                <property name="text">
-                 <string>Festz</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="3">
-               <widget class="QLabel" name="data_Festz">
-                <property name="text">
-                 <string>data_Festz</string>
-                </property>
-               </widget>
-              </item>
-              <item row="7" column="0">
-               <widget class="QLabel" name="label_29">
-                <property name="text">
-                 <string>Tz</string>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="0">
-               <widget class="QLabel" name="label_24">
-                <property name="text">
-                 <string>Ty</string>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="0">
-               <widget class="QLabel" name="label_30">
-                <property name="text">
-                 <string>||T||</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QPushButton" name="Calibration_button">
-                <property name="text">
-                 <string>Calibration</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="1">
-               <widget class="QLabel" name="data_normF">
-                <property name="text">
-                 <string>data_normF</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <widget class="QLabel" name="data_Fy">
-                <property name="text">
-                 <string>data_Fy</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="2">
-               <widget class="QLabel" name="label_18">
-                <property name="text">
-                 <string>Festy</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="3">
-               <widget class="QLabel" name="data_Festx">
-                <property name="text">
-                 <string>data_Festx</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="3">
-               <widget class="QLabel" name="data_Festy">
-                <property name="text">
-                 <string>data_Festy</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="0">
-               <widget class="QLabel" name="label_22">
-                <property name="text">
-                 <string>||F||</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="1">
-               <widget class="QLabel" name="data_Tx">
-                <property name="text">
-                 <string>data_Tx</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="2">
-               <widget class="QLabel" name="label_32">
-                <property name="text">
-                 <string>Testx</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="3">
-               <widget class="QLabel" name="data_Testx">
-                <property name="text">
-                 <string>data_Testx</string>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="1">
-               <widget class="QLabel" name="data_Ty">
-                <property name="text">
-                 <string>data_Ty</string>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="2">
-               <widget class="QLabel" name="label_35">
-                <property name="text">
-                 <string>Testy</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="2">
-               <widget class="QLabel" name="label_36">
-                <property name="text">
-                 <string>||Fest||</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="3">
-               <widget class="QLabel" name="data_normFest">
-                <property name="text">
-                 <string>data_normFest</string>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="3">
-               <widget class="QLabel" name="data_Testy">
-                <property name="text">
-                 <string>data_Testy</string>
-                </property>
-               </widget>
-              </item>
-              <item row="7" column="1">
-               <widget class="QLabel" name="data_Tz">
-                <property name="text">
-                 <string>data_Tz</string>
-                </property>
-               </widget>
-              </item>
-              <item row="7" column="2">
-               <widget class="QLabel" name="label_40">
-                <property name="text">
-                 <string>Testz</string>
-                </property>
-               </widget>
-              </item>
-              <item row="7" column="3">
-               <widget class="QLabel" name="data_Testz">
-                <property name="text">
-                 <string>data_Testz</string>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="1">
-               <widget class="QLabel" name="data_normT">
-                <property name="text">
-                 <string>data_normT</string>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="2">
-               <widget class="QLabel" name="label_43">
-                <property name="text">
-                 <string>||Test||</string>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="3">
-               <widget class="QLabel" name="data_normTest">
-                <property name="text">
-                 <string>data_normTest</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QGroupBox" name="groupBox">
-            <property name="title">
-             <string>Controller</string>
-            </property>
-            <widget class="QWidget" name="gridLayoutWidget_3">
-             <property name="geometry">
-              <rect>
-               <x>140</x>
-               <y>50</y>
-               <width>303</width>
-               <height>131</height>
-              </rect>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_3">
-              <item row="4" column="4">
-               <widget class="QPushButton" name="setkpkd_button">
-                <property name="text">
-                 <string>SetKpKd</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="4">
-               <widget class="QPushButton" name="SetCons_button">
-                <property name="text">
-                 <string>SetCons</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="3">
-               <widget class="QLabel" name="label_3">
-                <property name="text">
-                 <string>Z (m)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <widget class="QLineEdit" name="Xdes">
-                <property name="text">
-                 <string>0.5</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="3">
-               <widget class="QLineEdit" name="Zdes">
-                <property name="text">
-                 <string>0.5</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QLabel" name="label">
-                <property name="text">
-                 <string>X (m)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="2">
-               <widget class="QLabel" name="label_2">
-                <property name="text">
-                 <string>Y (m)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="2">
-               <widget class="QLineEdit" name="Ydes">
-                <property name="text">
-                 <string>0.0</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="3">
-               <widget class="QLabel" name="label_20">
-                <property name="text">
-                 <string>Kd</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="2">
-               <widget class="QLabel" name="label_19">
-                <property name="text">
-                 <string>Kp</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="3">
-               <widget class="QLineEdit" name="kd">
-                <property name="text">
-                 <string>0.1</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="2">
-               <widget class="QLineEdit" name="kp">
-                <property name="text">
-                 <string>6</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QLabel" name="currentXdes">
-                <property name="text">
-                 <string/>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="2">
-               <widget class="QLabel" name="currentYdes">
-                <property name="text">
-                 <string/>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="3">
-               <widget class="QLabel" name="currentZdes">
-                <property name="text">
-                 <string/>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="gridLayoutWidget_4">
-             <property name="geometry">
-              <rect>
-               <x>10</x>
-               <y>210</y>
-               <width>221</width>
-               <height>171</height>
-              </rect>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_4">
-              <item row="1" column="0">
-               <widget class="QPushButton" name="SetControlMode_button">
-                <property name="text">
-                 <string>SetControlMode</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="label_4">
-                <property name="text">
-                 <string>Period (s)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QLineEdit" name="period">
-                <property name="text">
-                 <string>0.001</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QLineEdit" name="controlmode">
-                <property name="text">
-                 <string>7</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="gridLayoutWidget_5">
-             <property name="geometry">
-              <rect>
-               <x>260</x>
-               <y>200</y>
-               <width>160</width>
-               <height>180</height>
-              </rect>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_5">
-              <item row="4" column="0">
-               <widget class="QLabel" name="label_8">
-                <property name="text">
-                 <string>4 : Cartesian Position</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLabel" name="label_5">
-                <property name="text">
-                 <string>1 : Joint Position</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="0">
-               <widget class="QLabel" name="label_6">
-                <property name="text">
-                 <string>2 : Joint Velocity</string>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="0">
-               <widget class="QLabel" name="label_10">
-                <property name="text">
-                 <string>6 : Cartesian Twist</string>
-                </property>
-               </widget>
-              </item>
-              <item row="7" column="0">
-               <widget class="QLabel" name="label_11">
-                <property name="text">
-                 <string>7 : Joint Impedance</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="0">
-               <widget class="QLabel" name="label_7">
-                <property name="text">
-                 <string>3 : Joint Torque</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="0">
-               <widget class="QLabel" name="label_9">
-                <property name="text">
-                 <string>5 : Cartesian Force</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="label_12">
-                <property name="text">
-                 <string>Control Mode</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="gridLayoutWidget_9">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>50</y>
-               <width>131</width>
-               <height>81</height>
-              </rect>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_9">
-              <item row="0" column="0">
-               <widget class="QPushButton" name="Jacobian_button">
-                <property name="text">
-                 <string>Jacobian</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QPushButton" name="model_button">
-                <property name="text">
-                 <string>Model</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </widget>
-          </item>
-         </layout>
-        </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
        </widget>
        <widget class="QWidget" name="jacobian">
         <attribute name="title">
@@ -1093,7 +1061,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1145</width>
+     <width>898</width>
      <height>25</height>
     </rect>
    </property>

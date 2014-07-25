@@ -201,14 +201,8 @@ current_controller:connect('2currentIndexChanged(int)', app, '1selectController(
 start_component = window:findChild("actionStartComponent")
 start_component:connect('2toggled(bool)', app, '1startStop(bool)')
 
-jacobian_demo = window:findChild("Jacobian_button")
-jacobian_demo:connect('2clicked()', app, '1startJacobian()' )
-
 ATI_calibration_demo = window:findChild("Calibration_button")
 ATI_calibration_demo:connect('2clicked()', app, '1ATIcalibration()')
-
-model_demo = window:findChild("model_button")
-model_demo:connect('2clicked()', app, '1startModel()' )
 
 SetCons = window:findChild("SetCons_button")
 SetCons:connect('2clicked()', app, '1setCons()')
