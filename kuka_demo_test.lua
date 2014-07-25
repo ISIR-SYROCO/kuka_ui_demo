@@ -136,9 +136,21 @@ end)
 app:__addmethod("setJntImp()", function()
     local stiffness = window:findChild("stiffness")
     local stiffness_value = stiffness:text()
+    local stiffness_table = {}
+    for i=1,7 do stiffness_table[i] = stiffness_value:toDouble() end
+    local stiffness_array = rtt.Variable("array")
+    stiffness_array:resize(7)
+    stiffness_array:fromtab(stiffness_table)
+
     local damping = window:findChild("damping")
     local damping_value = damping:text()
-    kukademo:setJointImpedance(stiffness_value:toDouble(),damping_value:toDouble())
+    local damping_table = {}
+    for i=1,7 do damping_table[i] = damping_value:toDouble() end
+    local damping_array = rtt.Variable("array")
+    damping_array:resize(7)
+    damping_array:fromtab(damping_table)
+
+    kukademo:setJointImpedance(stiffness_array,damping_array)
 end)
 
 app:__addmethod("setKpKd()", function()
