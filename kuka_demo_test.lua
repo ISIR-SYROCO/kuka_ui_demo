@@ -81,10 +81,17 @@ app:__addmethod("setCons()", function()
     local Xdes = window:findChild("Xdes")
     local Ydes = window:findChild("Ydes")
     local Zdes = window:findChild("Zdes")
+    local CurrentXdes = window:findChild("currentXdes")
+    local CurrentYdes = window:findChild("currentYdes")
+    local CurrentZdes = window:findChild("currentZdes")
 
     local Xdes_value = Xdes:text()
+    CurrentXdes:setText(Xdes:text())
     local Ydes_value = Ydes:text()
+    CurrentYdes:setText(Ydes:text())
     local Zdes_value = Zdes:text()
+    CurrentZdes:setText(Zdes:text())
+
     local pos_des = rtt.Variable("array")
     pos_des:resize(3)
     pos_des:fromtab{Xdes_value:toDouble(), Ydes_value:toDouble(), Zdes_value:toDouble()}
@@ -92,14 +99,17 @@ app:__addmethod("setCons()", function()
 end)
 
 app:__addmethod("startStop(bool)", function(self, checked)
+    local startComponent = window:findChild("actionStartComponent")
     if checked ==true then
         --getPeriod
         local period = window:findChild("period")
         local period_value = period:text()
+        startComponent:setText(Q"Stop Component")
         --sendPeriod to component
         kukademo:setPeriod(period_value:toDouble())
         kukademo:start()
     else
+        startComponent:setText(Q"Start Component")
         kukademo:stop()
     end
 end)
@@ -184,12 +194,6 @@ model_demo:connect('2clicked()', app, '1startModel()' )
 
 SetCons = window:findChild("SetCons_button")
 SetCons:connect('2clicked()', app, '1setCons()')
-
-Start = window:findChild("Start_button")
-Start:connect('2clicked()', app, '1Start()')
-
-Stop = window:findChild("Stop_button")
-Stop:connect('2clicked()', app, '1Stop()')
 
 SetControlStrategy = window:findChild("SetControlMode_button")
 SetControlStrategy:connect('2clicked()', app, '1SetControlStrategy()')
