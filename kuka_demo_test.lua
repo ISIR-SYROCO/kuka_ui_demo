@@ -52,6 +52,21 @@ app:__addmethod("connectRobot(bool)", function(self, checked)
     --name:configure()
     --name:start()
 end)
+
+app:__addmethod("selectController(int)", function(self, index)
+    if index == 0 then
+        --Dummy controller
+        print ("Launch Dummy")
+        dp:runScript("orocos/load_simple_demo.ops")
+    elseif index == 1 then
+        print ("Launch Kuka Transpose")
+        dp:runScript("../kuka_jacobian_demo/orocos_script/KukaJacobianDemoRTNET.ops")
+    elseif index == 2 then
+        print ("Launch Kuka Model Transpose")
+        dp:runScript("../kuka_model_demo/orocos_script/kuka_model_demo.ops")
+    end
+    kukademo = dp:getPeer("KukaDemo")
+end)
  
 app:__addmethod("startJacobian()", function()
     print ("Launch Kuka Transpose")
@@ -179,6 +194,9 @@ end)
 
 connect_robot = window:findChild("actionConnect")
 connect_robot:connect('2toggled(bool)', app, '1connectRobot(bool)')
+
+current_controller = window:findChild("CurrentController")
+current_controller:connect('2currentIndexChanged(int)', app, '1selectController(int)')
 
 start_component = window:findChild("actionStartComponent")
 start_component:connect('2toggled(bool)', app, '1startStop(bool)')
