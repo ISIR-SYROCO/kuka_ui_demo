@@ -199,6 +199,37 @@ app:__addmethod("setTool()", function()
     kukademo:setTool(tool_value:toUInt())
 end)
 
+app:__addmethod("setFRIQdes()", function()
+    local A1des = window:findChild("A1des")
+    local A2des = window:findChild("A2des")
+    local E1des = window:findChild("E1des")
+    local A3des = window:findChild("A3des")
+    local A4des = window:findChild("A4des")
+    local A5des = window:findChild("A5des")
+    local A6des = window:findChild("A6des")
+    
+    local A1desValue = A1des:text()
+    local A2desValue = A2des:text()
+    local E1desValue = E1des:text()
+    local A3desValue = A3des:text()
+    local A4desValue = A4des:text()
+    local A5desValue = A5des:text()
+    local A6desValue = A6des:text()
+
+    local q_array = rtt.Variable("array")
+    q_array:resize(7)
+    q_tab = {}
+    q_tab[1] = A1desValue:toDouble()
+    q_tab[2] = A2desValue:toDouble()
+    q_tab[3] = E1desValue:toDouble()
+    q_tab[4] = A3desValue:toDouble()
+    q_tab[5] = A4desValue:toDouble()
+    q_tab[6] = A5desValue:toDouble()
+    q_tab[7] = A6desValue:toDouble()
+    local q_array:fromtab(q_tab)
+    kukademo:sendJointPosition(q_array)
+end)
+
 connect_robot = window:findChild("actionConnect")
 connect_robot:connect('2toggled(bool)', app, '1connectRobot(bool)')
 
@@ -234,6 +265,9 @@ SetKpKd:connect('2clicked()', app, '1setKpKd()' )
 
 SetTool = window:findChild("set_tool_button")
 SetTool:connect('2clicked()', app, '1setTool()' )
+
+SetQdes = window:findChild("setQdes_button")
+SetQdes:connect('2clicked()', app, '1setFRIQdes()')
 
 timer= QTimer(parent)
 timer:connect('2timeout()', function() 
