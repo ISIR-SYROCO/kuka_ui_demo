@@ -292,12 +292,31 @@ timer:connect('2timeout()', function()
             pos_cart:resize(3)
         pos_cart = kukademo:getCartPos() -- to add in friexamples
         --pos_cart:fromtab{1.0,2.2,-2.3}
-        Xee = window:findChild("Xee")
-        Yee = window:findChild("Yee")
-        Zee = window:findChild("Zee")
+        local Xee = window:findChild("Xee")
+        local Yee = window:findChild("Yee")
+        local Zee = window:findChild("Zee")
+        local Mee00 = window:findChild("Mee00")
+        local Mee01 = window:findChild("Mee01")
+        local Mee02 = window:findChild("Mee02")
+        local Mee10 = window:findChild("Mee10")
+        local Mee11 = window:findChild("Mee11")
+        local Mee12 = window:findChild("Mee12")
+        local Mee20 = window:findChild("Mee20")
+        local Mee21 = window:findChild("Mee21")
+        local Mee22 = window:findChild("Mee22")
         Xee:setText(QString():setNum(pos_cart[0]))
         Yee:setText(QString():setNum(pos_cart[1]))
         Zee:setText(QString():setNum(pos_cart[2]))
+
+        Mee00:setText(QString():setNum(pos_cart[3]))
+        Mee01:setText(QString():setNum(pos_cart[4]))
+        Mee02:setText(QString():setNum(pos_cart[5]))
+        Mee10:setText(QString():setNum(pos_cart[6]))
+        Mee11:setText(QString():setNum(pos_cart[7]))
+        Mee12:setText(QString():setNum(pos_cart[8]))
+        Mee20:setText(QString():setNum(pos_cart[9]))
+        Mee21:setText(QString():setNum(pos_cart[10]))
+        Mee22:setText(QString():setNum(pos_cart[11]))
 
         local ATIvalues = rtt.Variable("array")
         ATIvalues:resize(8)
@@ -460,8 +479,9 @@ timer:connect('2timeout()', function()
         currentA4:setText(QString():setNum(q[4]))
         currentA5:setText(QString():setNum(q[5]))
         currentA6:setText(QString():setNum(q[6]))
+
     end
 end)
-timer:start(100) --msec
+timer:start(200) --msec
 
 app.exec()
