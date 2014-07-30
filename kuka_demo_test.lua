@@ -423,6 +423,27 @@ timer:connect('2timeout()', function()
         J65:setText(QString():setNum(jacobian_matrix[39]))
         J66:setText(QString():setNum(jacobian_matrix[40]))
         J67:setText(QString():setNum(jacobian_matrix[41]))
+
+        --Qmes
+        local currentA1 = window:findChild("currentA1_label")
+        local currentA2 = window:findChild("currentA2_label")
+        local currentE1 = window:findChild("currentE1_label")
+        local currentA3 = window:findChild("currentA3_label")
+        local currentA4 = window:findChild("currentA4_label")
+        local currentA5 = window:findChild("currentA5_label")
+        local currentA6 = window:findChild("currentA6_label")
+
+        local q = rtt.Variable("array")
+        q:resize(7)
+        q = kukademo:getQ()
+
+        currentA1:setText(QString():setNum(q[0]))
+        currentA2:setText(QString():setNum(q[1]))
+        currentE1:setText(QString():setNum(q[2]))
+        currentA3:setText(QString():setNum(q[3]))
+        currentA4:setText(QString():setNum(q[4]))
+        currentA5:setText(QString():setNum(q[5]))
+        currentA6:setText(QString():setNum(q[6]))
     end
 end)
 timer:start(100) --msec
