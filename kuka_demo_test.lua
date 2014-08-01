@@ -53,7 +53,9 @@ app:__addmethod("connectRobot(bool)", function(self, checked)
     --name:start()
 end)
 
+selected_controller = 0
 app:__addmethod("selectController(int)", function(self, index)
+    selected_controller = index
     if index == 0 then
         --Dummy controller
         print ("Launch Dummy")
@@ -480,8 +482,109 @@ timer:connect('2timeout()', function()
         currentA5:setText(QString():setNum(q[5]))
         currentA6:setText(QString():setNum(q[6]))
 
+        if selected_controller == 2 then
+            local J00_model = window:findChild("J00_model")
+            local J01_model = window:findChild("J01_model")
+            local J02_model = window:findChild("J02_model")
+            local J03_model = window:findChild("J03_model")
+            local J04_model = window:findChild("J04_model")
+            local J05_model = window:findChild("J05_model")
+            local J06_model = window:findChild("J06_model")
+
+            local J10_model = window:findChild("J10_model")
+            local J11_model = window:findChild("J11_model")
+            local J12_model = window:findChild("J12_model")
+            local J13_model = window:findChild("J13_model")
+            local J14_model = window:findChild("J14_model")
+            local J15_model = window:findChild("J15_model")
+            local J16_model = window:findChild("J16_model")
+
+            local J20_model = window:findChild("J20_model")
+            local J21_model = window:findChild("J21_model")
+            local J22_model = window:findChild("J22_model")
+            local J23_model = window:findChild("J23_model")
+            local J24_model = window:findChild("J24_model")
+            local J25_model = window:findChild("J25_model")
+            local J26_model = window:findChild("J26_model")
+
+            local J30_model = window:findChild("J30_model")
+            local J31_model = window:findChild("J31_model")
+            local J32_model = window:findChild("J32_model")
+            local J33_model = window:findChild("J33_model")
+            local J34_model = window:findChild("J34_model")
+            local J35_model = window:findChild("J35_model")
+            local J36_model = window:findChild("J36_model")
+
+            local J40_model = window:findChild("J40_model")
+            local J41_model = window:findChild("J41_model")
+            local J42_model = window:findChild("J42_model")
+            local J43_model = window:findChild("J43_model")
+            local J44_model = window:findChild("J44_model")
+            local J45_model = window:findChild("J45_model")
+            local J46_model = window:findChild("J46_model")
+
+            local J50_model = window:findChild("J50_model")
+            local J51_model = window:findChild("J51_model")
+            local J52_model = window:findChild("J52_model")
+            local J53_model = window:findChild("J53_model")
+            local J54_model = window:findChild("J54_model")
+            local J55_model = window:findChild("J55_model")
+            local J56_model = window:findChild("J56_model")
+
+            local jacobian_model = rtt.Variable("array")
+            jacobian_model:resize(42)
+            jacobian_model = kukademo:getJacobianModel(7)
+
+            J00_model:setText(QString():setNum(jacobian_model[0]))
+            J01_model:setText(QString():setNum(jacobian_model[1]))
+            J02_model:setText(QString():setNum(jacobian_model[2]))
+            J03_model:setText(QString():setNum(jacobian_model[3]))
+            J04_model:setText(QString():setNum(jacobian_model[4]))
+            J05_model:setText(QString():setNum(jacobian_model[5]))
+            J06_model:setText(QString():setNum(jacobian_model[6]))
+
+            J10_model:setText(QString():setNum(jacobian_model[7]))
+            J11_model:setText(QString():setNum(jacobian_model[8]))
+            J12_model:setText(QString():setNum(jacobian_model[9]))
+            J13_model:setText(QString():setNum(jacobian_model[10]))
+            J14_model:setText(QString():setNum(jacobian_model[11]))
+            J15_model:setText(QString():setNum(jacobian_model[12]))
+            J16_model:setText(QString():setNum(jacobian_model[13]))
+            
+            J20_model:setText(QString():setNum(jacobian_model[14]))
+            J21_model:setText(QString():setNum(jacobian_model[15]))
+            J22_model:setText(QString():setNum(jacobian_model[16]))
+            J23_model:setText(QString():setNum(jacobian_model[17]))
+            J24_model:setText(QString():setNum(jacobian_model[18]))
+            J25_model:setText(QString():setNum(jacobian_model[19]))
+            J26_model:setText(QString():setNum(jacobian_model[20]))
+
+            J30_model:setText(QString():setNum(jacobian_model[21]))
+            J31_model:setText(QString():setNum(jacobian_model[22]))
+            J32_model:setText(QString():setNum(jacobian_model[23]))
+            J33_model:setText(QString():setNum(jacobian_model[24]))
+            J34_model:setText(QString():setNum(jacobian_model[25]))
+            J35_model:setText(QString():setNum(jacobian_model[26]))
+            J36_model:setText(QString():setNum(jacobian_model[27]))
+
+            J40_model:setText(QString():setNum(jacobian_model[28]))
+            J41_model:setText(QString():setNum(jacobian_model[29]))
+            J42_model:setText(QString():setNum(jacobian_model[30]))
+            J43_model:setText(QString():setNum(jacobian_model[31]))
+            J44_model:setText(QString():setNum(jacobian_model[32]))
+            J45_model:setText(QString():setNum(jacobian_model[33]))
+            J46_model:setText(QString():setNum(jacobian_model[34]))
+
+            J50_model:setText(QString():setNum(jacobian_model[35]))
+            J51_model:setText(QString():setNum(jacobian_model[36]))
+            J52_model:setText(QString():setNum(jacobian_model[37]))
+            J53_model:setText(QString():setNum(jacobian_model[38]))
+            J54_model:setText(QString():setNum(jacobian_model[39]))
+            J55_model:setText(QString():setNum(jacobian_model[40]))
+            J56_model:setText(QString():setNum(jacobian_model[41]))
+        end
     end
 end)
-timer:start(200) --msec
+timer:start(500) --msec
 
 app.exec()
