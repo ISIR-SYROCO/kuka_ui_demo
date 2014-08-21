@@ -28,8 +28,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>850</width>
-         <height>599</height>
+         <width>864</width>
+         <height>612</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_5">
@@ -604,8 +604,8 @@
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>373</width>
-                      <height>455</height>
+                      <width>189</width>
+                      <height>166</height>
                      </rect>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_18">
@@ -943,8 +943,8 @@
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>373</width>
-                      <height>455</height>
+                      <width>100</width>
+                      <height>162</height>
                      </rect>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_28">
@@ -2434,7 +2434,7 @@
         </widget>
        </item>
        <item row="2" column="3">
-        <widget class="QLabel" name="label_8">
+        <widget class="QLabel" name="currentE1_label">
          <property name="text">
           <string>E1</string>
          </property>
@@ -2474,7 +2474,7 @@
         </widget>
        </item>
        <item row="2" column="5">
-        <widget class="QLabel" name="label_10">
+        <widget class="QLabel" name="currentA4_label">
          <property name="text">
           <string>A4</string>
          </property>
@@ -2494,7 +2494,7 @@
         </widget>
        </item>
        <item row="2" column="2">
-        <widget class="QLabel" name="label_7">
+        <widget class="QLabel" name="currentA2_label">
          <property name="text">
           <string>A2</string>
          </property>
@@ -2514,7 +2514,7 @@
         </widget>
        </item>
        <item row="2" column="6">
-        <widget class="QLabel" name="label_11">
+        <widget class="QLabel" name="currentA5_label">
          <property name="text">
           <string>A5</string>
          </property>
@@ -2534,7 +2534,7 @@
         </widget>
        </item>
        <item row="2" column="4">
-        <widget class="QLabel" name="label_9">
+        <widget class="QLabel" name="currentA3_label">
          <property name="text">
           <string>A3</string>
          </property>
@@ -2668,7 +2668,7 @@
         </widget>
        </item>
        <item row="2" column="7">
-        <widget class="QLabel" name="label_12">
+        <widget class="QLabel" name="currentA6_label">
          <property name="text">
           <string>A6</string>
          </property>
@@ -2826,7 +2826,7 @@
      <x>0</x>
      <y>0</y>
      <width>886</width>
-     <height>25</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
