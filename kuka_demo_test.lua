@@ -244,7 +244,7 @@ app:__addmethod("setFRIQdes()", function()
     q_tab[5] = A4desValue:toDouble()
     q_tab[6] = A5desValue:toDouble()
     q_tab[7] = A6desValue:toDouble()
-    local q_array:fromtab(q_tab)
+    q_array:fromtab(q_tab)
     kukademo:sendJointPosition(q_array)
 end)
 
