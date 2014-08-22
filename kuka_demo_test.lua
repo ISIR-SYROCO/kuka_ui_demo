@@ -26,22 +26,26 @@ dp:import("ATISensor")
 dp:loadComponent("ATI", "ATISensor")
 ATI = dp:getPeer("ATI")
 
+selected_controller = 0
+
 app:__addmethod("connectRobot(bool)", function(self, checked)
     local connectRobot = window:findChild("actionConnect")
     local lwr = dp:getPeer("lwr")
-    if checked == true then
-        print("Connect to robot")
-        connected = true
-        connectRobot:setText(Q"Connected")
-        lwr:start()
-        --dp:runScript("orocos/load_simple_demo.ops")
-        --kukademo = dp:getPeer("KukaDemo")
-    else
-        print("Disconnect")
-        connected = false
-        connectRobot:setText(Q"Connect")
-        lwr:stop()
-        --dp:runScript("orocos/unload_simple_demo.ops")
+    if selected_controller ~= 0 then
+        if checked == true then
+    	    print("Connect to robot")
+            connected = true
+            connectRobot:setText(Q"Connected")
+            lwr:start()
+            --dp:runScript("orocos/load_simple_demo.ops")
+            --kukademo = dp:getPeer("KukaDemo")
+    	else
+	    print("Disconnect")
+            connected = false
+            connectRobot:setText(Q"Connect")
+            lwr:stop()
+            --dp:runScript("orocos/unload_simple_demo.ops")
+	end
     end
 
     --dp:runScript("../kuka_simple_demo/orocos_script/kuka_demo.ops")
@@ -53,7 +57,7 @@ app:__addmethod("connectRobot(bool)", function(self, checked)
     --name:start()
 end)
 
-selected_controller = 0
+
 app:__addmethod("selectController(int)", function(self, index)
     selected_controller = index
     
@@ -158,7 +162,7 @@ app:__addmethod("SetControlStrategy(int)", function(self, index)
     local controlmode = window:findChild("controlModeMenu")
     kukademo:friStop()
 	print(index)
-    kukademo:setControlStrategy(index)
+    kukademo:setControlStrategy(index+1)
 end)
 
 app:__addmethod("fricmd()", function()
