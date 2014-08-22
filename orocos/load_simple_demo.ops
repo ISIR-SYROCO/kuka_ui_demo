@@ -27,5 +27,6 @@ connect("lwr.Jacobian", "KukaDemo.Jacobian_i", cp)
 
 
 KukaDemo.configure
+KukaDemo.friReset
 
 lwr.control_mode=7
