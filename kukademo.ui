@@ -28,8 +28,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>864</width>
-         <height>612</height>
+         <width>850</width>
+         <height>599</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_5">
@@ -38,7 +38,7 @@
           <item row="1" column="0">
            <widget class="QTabWidget" name="tabWidget">
             <property name="currentIndex">
-             <number>2</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="main">
              <attribute name="title">
@@ -604,8 +604,8 @@
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>189</width>
-                      <height>166</height>
+                      <width>373</width>
+                      <height>455</height>
                      </rect>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_18">
@@ -943,8 +943,8 @@
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>100</width>
-                      <height>162</height>
+                      <width>373</width>
+                      <height>455</height>
                      </rect>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_28">
@@ -2348,6 +2348,11 @@
               </property>
               <item>
                <property name="text">
+                <string>Select Controller</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
                 <string>Dummy Controller</string>
                </property>
               </item>
@@ -2826,7 +2831,7 @@
      <x>0</x>
      <y>0</y>
      <width>886</width>
-     <height>20</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

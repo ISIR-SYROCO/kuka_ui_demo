@@ -34,14 +34,14 @@ app:__addmethod("connectRobot(bool)", function(self, checked)
         connected = true
         connectRobot:setText(Q"Connected")
         lwr:start()
-        dp:runScript("orocos/load_simple_demo.ops")
-        kukademo = dp:getPeer("KukaDemo")
+        --dp:runScript("orocos/load_simple_demo.ops")
+        --kukademo = dp:getPeer("KukaDemo")
     else
         print("Disconnect")
         connected = false
         connectRobot:setText(Q"Connect")
         lwr:stop()
-        dp:runScript("orocos/unload_simple_demo.ops")
+        --dp:runScript("orocos/unload_simple_demo.ops")
     end
 
     --dp:runScript("../kuka_simple_demo/orocos_script/kuka_demo.ops")
@@ -56,14 +56,15 @@ end)
 selected_controller = 0
 app:__addmethod("selectController(int)", function(self, index)
     selected_controller = index
-    if index == 0 then
+    
+    if index == 1 then
         --Dummy controller
         print ("Launch Dummy")
         dp:runScript("orocos/load_simple_demo.ops")
-    elseif index == 1 then
+    elseif index == 2 then
         print ("Launch Kuka Transpose")
         dp:runScript("../kuka_jacobian_demo/orocos_script/KukaJacobianDemoRTNET.ops")
-    elseif index == 2 then
+    elseif index == 3 then
         print ("Launch Kuka Model Transpose")
         dp:runScript("../kuka_model_demo/orocos_script/kuka_model_demo.ops")
     end
@@ -124,6 +125,7 @@ app:__addmethod("startStop(bool)", function(self, checked)
         startComponent:setText(Q"Stop Component")
         --sendPeriod to component
         kukademo:setPeriod(period_value:toDouble())
+	print("Start component")
         kukademo:start()
     else
         startComponent:setText(Q"Start Component")
