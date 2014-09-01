@@ -118,6 +118,7 @@ app:__addmethod("setCons()", function()
     pos_des:resize(3)
     pos_des:fromtab{Xdes_value:toDouble(), Ydes_value:toDouble(), Zdes_value:toDouble()}
     kukademo:setXcons(pos_des)
+    print ("SetCons")
 end)
 
 app:__addmethod("startStop(bool)", function(self, checked)
@@ -254,6 +255,13 @@ app:__addmethod("setFRIQdes()", function()
     kukademo:sendJointPosition(q_array)
 end)
 
+app:__addmethod("exec_lua()", function()
+    local lua_interpreter = window:findChild("lua_interpreter")
+    local lua_cmd = lua_interpreter:text()
+    loadstring(lua_cmd:toStdString())()
+    lua_interpreter:setText("")
+end)
+
 connect_robot = window:findChild("actionConnect")
 connect_robot:connect('2toggled(bool)', app, '1connectRobot(bool)')
 
@@ -292,6 +300,9 @@ SetTool:connect('2clicked()', app, '1setTool()' )
 
 SetQdes = window:findChild("setQdes_button")
 SetQdes:connect('2clicked()', app, '1setFRIQdes()')
+
+lua_interpreter_button = window:findChild("lua_interpreter_button")
+lua_interpreter_button:connect('2clicked()', app, '1exec_lua()')
 
 function updateMassMatrix()
     local M00 = window:findChild("MassMatrix00")
@@ -410,7 +421,7 @@ timer= QTimer(parent)
 timer:connect('2timeout()', function() 
     if connected == true then
         local pos_cart = rtt.Variable("array")
-            pos_cart:resize(3)
+        pos_cart:resize(12)
         pos_cart = kukademo:getCartPos() -- to add in friexamples
         --pos_cart:fromtab{1.0,2.2,-2.3}
         local Xee = window:findChild("Xee")
@@ -419,12 +430,15 @@ timer:connect('2timeout()', function()
         local Mee00 = window:findChild("Mee00")
         local Mee01 = window:findChild("Mee01")
         local Mee02 = window:findChild("Mee02")
+	local Mee03 = window:findChild("Mee03")
         local Mee10 = window:findChild("Mee10")
         local Mee11 = window:findChild("Mee11")
         local Mee12 = window:findChild("Mee12")
+	local Mee13 = window:findChild("Mee13")	
         local Mee20 = window:findChild("Mee20")
         local Mee21 = window:findChild("Mee21")
         local Mee22 = window:findChild("Mee22")
+	local Mee23 = window:findChild("Mee23")
         Xee:setText(QString():setNum(pos_cart[0]))
         Yee:setText(QString():setNum(pos_cart[1]))
         Zee:setText(QString():setNum(pos_cart[2]))
@@ -432,12 +446,15 @@ timer:connect('2timeout()', function()
         Mee00:setText(QString():setNum(pos_cart[3]))
         Mee01:setText(QString():setNum(pos_cart[4]))
         Mee02:setText(QString():setNum(pos_cart[5]))
+	Mee03:setText(QString():setNum(pos_cart[0]))
         Mee10:setText(QString():setNum(pos_cart[6]))
         Mee11:setText(QString():setNum(pos_cart[7]))
         Mee12:setText(QString():setNum(pos_cart[8]))
+	Mee13:setText(QString():setNum(pos_cart[1]))
         Mee20:setText(QString():setNum(pos_cart[9]))
         Mee21:setText(QString():setNum(pos_cart[10]))
         Mee22:setText(QString():setNum(pos_cart[11]))
+	Mee23:setText(QString():setNum(pos_cart[2]))
 
         local ATIvalues = rtt.Variable("array")
         ATIvalues:resize(8)
@@ -601,7 +618,7 @@ timer:connect('2timeout()', function()
         currentA5:setText(QString():setNum(q[5]))
         currentA6:setText(QString():setNum(q[6]))
 
-        if selected_controller == 2 then
+        if selected_controller == 3 then
             local J00_model = window:findChild("J00_model")
             local J01_model = window:findChild("J01_model")
             local J02_model = window:findChild("J02_model")
@@ -652,7 +669,7 @@ timer:connect('2timeout()', function()
 
             local jacobian_model = rtt.Variable("array")
             jacobian_model:resize(42)
-            jacobian_model = kukademo:getJacobianModel(7)
+            jacobian_model = kukademo:getJacobianModel(6)
 
             J00_model:setText(QString():setNum(jacobian_model[0]))
             J01_model:setText(QString():setNum(jacobian_model[1]))
@@ -702,10 +719,10 @@ timer:connect('2timeout()', function()
             J55_model:setText(QString():setNum(jacobian_model[40]))
             J56_model:setText(QString():setNum(jacobian_model[41]))
 
-            updateMassMatrix()
         end
+    updateMassMatrix()
     end
 end)
-timer:start(500) --msec
+timer:start(1000) --msec
 
-app.exec()
+app.exec();

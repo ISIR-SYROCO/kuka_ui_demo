@@ -38,7 +38,7 @@
           <item row="1" column="0">
            <widget class="QTabWidget" name="tabWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>4</number>
             </property>
             <widget class="QWidget" name="main">
              <attribute name="title">
@@ -2331,6 +2331,27 @@
                     </spacer>
                    </item>
                   </layout>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="tab_3">
+             <attribute name="title">
+              <string>Interpreter</string>
+             </attribute>
+             <layout class="QGridLayout" name="gridLayout_32">
+              <item row="0" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_4">
+                <item>
+                 <widget class="QLineEdit" name="lua_interpreter"/>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="lua_interpreter_button">
+                  <property name="text">
+                   <string>Exec</string>
+                  </property>
                  </widget>
                 </item>
                </layout>
