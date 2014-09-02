@@ -28,8 +28,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>850</width>
-         <height>599</height>
+         <width>866</width>
+         <height>591</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_5">
@@ -38,7 +38,7 @@
           <item row="1" column="0">
            <widget class="QTabWidget" name="tabWidget">
             <property name="currentIndex">
-             <number>4</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="main">
              <attribute name="title">
@@ -546,13 +546,6 @@
                    </item>
                    <item>
                     <layout class="QGridLayout" name="gridLayout_4">
-                     <item row="1" column="0">
-                      <widget class="QPushButton" name="SetControlMode_button">
-                       <property name="text">
-                        <string>SetControlMode</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item row="0" column="0">
                       <widget class="QLabel" name="label_4">
                        <property name="text">
@@ -567,10 +560,125 @@
                        </property>
                       </widget>
                      </item>
-                     <item row="1" column="1">
-                      <widget class="QLineEdit" name="controlmode">
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="tab_4">
+             <attribute name="title">
+              <string>Sensor</string>
+             </attribute>
+             <layout class="QGridLayout" name="gridLayout_37">
+              <item row="0" column="0">
+               <layout class="QGridLayout" name="gridLayout_33">
+                <item row="0" column="0">
+                 <widget class="QGroupBox" name="groupBox_10">
+                  <property name="title">
+                   <string>Estimated External Joint Torque</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_39">
+                   <item row="0" column="0">
+                    <layout class="QGridLayout" name="gridLayout_38">
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="estTrq0">
                        <property name="text">
-                        <string>7</string>
+                        <string>estTrq0</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="0">
+                      <widget class="QLabel" name="label_58">
+                       <property name="text">
+                        <string>q5</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_12">
+                       <property name="text">
+                        <string>q3</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLabel" name="estTrq1">
+                       <property name="text">
+                        <string>estTrq1</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_7">
+                       <property name="text">
+                        <string>q0</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="label_57">
+                       <property name="text">
+                        <string>q4</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_11">
+                       <property name="text">
+                        <string>q2</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_8">
+                       <property name="text">
+                        <string>q1</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="6" column="0">
+                      <widget class="QLabel" name="label_60">
+                       <property name="text">
+                        <string>q6</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLabel" name="estTrq2">
+                       <property name="text">
+                        <string>estTrq2</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QLabel" name="estTrq3">
+                       <property name="text">
+                        <string>estTrq3</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QLabel" name="estTrq4">
+                       <property name="text">
+                        <string>estTrq4</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="1">
+                      <widget class="QLabel" name="estTrq5">
+                       <property name="text">
+                        <string>estTrq5</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="6" column="1">
+                      <widget class="QLabel" name="estTrq6">
+                       <property name="text">
+                        <string>estTrq6</string>
                        </property>
                       </widget>
                      </item>
@@ -580,6 +688,103 @@
                  </widget>
                 </item>
                </layout>
+              </item>
+              <item row="0" column="1">
+               <widget class="QGroupBox" name="groupBox_11">
+                <property name="title">
+                 <string>Estimated External Tool Center Point Wrench</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_41">
+                 <item row="0" column="0">
+                  <layout class="QGridLayout" name="gridLayout_40">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_71">
+                     <property name="text">
+                      <string>Tcp Fx</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLabel" name="estFz">
+                     <property name="text">
+                      <string>estFz</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QLabel" name="estTx">
+                     <property name="text">
+                      <string>estTx</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_75">
+                     <property name="text">
+                      <string>Tcp Fz</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="estFx">
+                     <property name="text">
+                      <string>estFx</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="label_79">
+                     <property name="text">
+                      <string>Tcp Ty</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="label_77">
+                     <property name="text">
+                      <string>Tcp Tx</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLabel" name="estFy">
+                     <property name="text">
+                      <string>estFy</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_73">
+                     <property name="text">
+                      <string>Tcp Fy</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0">
+                    <widget class="QLabel" name="label_80">
+                     <property name="text">
+                      <string>Tcp Tz</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="1">
+                    <widget class="QLabel" name="estTy">
+                     <property name="text">
+                      <string>estTy</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="1">
+                    <widget class="QLabel" name="estTz">
+                     <property name="text">
+                      <string>estTz</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
               </item>
              </layout>
             </widget>
@@ -604,8 +809,8 @@
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>373</width>
-                      <height>455</height>
+                      <width>381</width>
+                      <height>447</height>
                      </rect>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_18">
@@ -943,8 +1148,8 @@
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>373</width>
-                      <height>455</height>
+                      <width>381</width>
+                      <height>447</height>
                      </rect>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_28">

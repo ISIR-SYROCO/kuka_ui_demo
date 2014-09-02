@@ -151,14 +151,6 @@ app:__addmethod("Stop()", function()
     kukademo:stop()
 end)
 
---app:__addmethod("SetControlStrategy()", function()
---    local controlmode = window:findChild("controlmode")
---    local controlmode_value = controlmode:text()
---    kukademo:friStop()
---	print(controlmode_value:toUInt())
---    kukademo:setControlStrategy(controlmode_value:toUInt())
---end)
-
 app:__addmethod("SetControlStrategy(int)", function(self, index)
     local controlmode = window:findChild("controlModeMenu")
     kukademo:friStop()
@@ -279,9 +271,6 @@ ATI_calibration_demo:connect('2clicked()', app, '1ATIcalibration()')
 
 SetCons = window:findChild("SetCons_button")
 SetCons:connect('2clicked()', app, '1setCons()')
-
---SetControlStrategy = window:findChild("SetControlMode_button")
---SetControlStrategy:connect('2clicked()', app, '1SetControlStrategy()')
 
 FRI_cmd_mode = window:findChild("fri_cmd_button")
 FRI_cmd_mode:connect('2clicked()', app, '1fricmd()' )
@@ -415,6 +404,23 @@ function updateMassMatrix()
     M65:setText(QString():setNum(massMatrix[47]))
     M66:setText(QString():setNum(massMatrix[48]))
 
+end
+
+function updateSensor()
+    local estTrq0 = window:findChild("estTrq0")
+    local estTrq1 = window:findChild("estTrq1")
+    local estTrq2 = window:findChild("estTrq2")
+    local estTrq3 = window:findChild("estTrq3")
+    local estTrq4 = window:findChild("estTrq4")
+    local estTrq5 = window:findChild("estTrq5")
+    local estTrq6 = window:findChild("estTrq6")
+
+    local estFx = window:findChild("estFx")
+    local estFy = window:findChild("estFy")
+    local estFz = window:findChild("estFz")
+    local estTx = window:findChild("estTx")
+    local estTy = window:findChild("estTy")
+    local estTz = window:findChild("estTz")
 end
 
 timer= QTimer(parent)
