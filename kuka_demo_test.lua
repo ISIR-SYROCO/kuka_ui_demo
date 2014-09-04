@@ -750,6 +750,7 @@ timer:connect('2timeout()', function()
 
         end
     updateMassMatrix()
+    updateSensor()
     end
 end)
 timer:start(1000) --msec
