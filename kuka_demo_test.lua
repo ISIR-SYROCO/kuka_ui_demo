@@ -415,12 +415,35 @@ function updateSensor()
     local estTrq5 = window:findChild("estTrq5")
     local estTrq6 = window:findChild("estTrq6")
 
+    local trq = rtt.Variable("array")
+    trq:resize(7)
+    trq = kukademo:getEstExtJntTrq()
+
+    estTrq0:setText(QString():setNum(trq[0]))
+    estTrq1:setText(QString():setNum(trq[1]))
+    estTrq2:setText(QString():setNum(trq[2]))
+    estTrq3:setText(QString():setNum(trq[3]))
+    estTrq4:setText(QString():setNum(trq[4]))
+    estTrq5:setText(QString():setNum(trq[5]))
+    estTrq6:setText(QString():setNum(trq[6]))
+
     local estFx = window:findChild("estFx")
     local estFy = window:findChild("estFy")
     local estFz = window:findChild("estFz")
     local estTx = window:findChild("estTx")
     local estTy = window:findChild("estTy")
     local estTz = window:findChild("estTz")
+
+    local wrench = rtt.Variable("array")
+    wrench:resize(6)
+    wrench = kukademo:getEstExtTcpWrench()
+
+    estFx:setText(QString():setNum(wrench[0]))
+    estFy:setText(QString():setNum(wrench[1]))
+    estFz:setText(QString():setNum(wrench[2]))
+    estTx:setText(QString():setNum(wrench[3]))
+    estTy:setText(QString():setNum(wrench[4]))
+    estTz:setText(QString():setNum(wrench[5]))
 end
 
 timer= QTimer(parent)
