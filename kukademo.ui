@@ -27,9 +27,9 @@
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>0</y>
-         <width>866</width>
-         <height>591</height>
+         <y>-304</y>
+         <width>850</width>
+         <height>895</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_5">
@@ -38,7 +38,7 @@
           <item row="1" column="0">
            <widget class="QTabWidget" name="tabWidget">
             <property name="currentIndex">
-             <number>1</number>
+             <number>4</number>
             </property>
             <widget class="QWidget" name="main">
              <attribute name="title">
@@ -788,6 +788,346 @@
               </item>
              </layout>
             </widget>
+            <widget class="QWidget" name="tab_5">
+             <attribute name="title">
+              <string>Ports</string>
+             </attribute>
+             <layout class="QGridLayout" name="gridLayout_43">
+              <item row="0" column="0">
+               <layout class="QGridLayout" name="gridLayout_42">
+                <item row="8" column="1">
+                 <widget class="QPushButton" name="ConnectCmdCartPos">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QPushButton" name="ConnectRobotState_i">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="9" column="1">
+                 <widget class="QPushButton" name="ConnectCmdCartPosFriOffset">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="16" column="1">
+                 <widget class="QPushButton" name="ConnectJacobian">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="17" column="1">
+                 <widget class="QPushButton" name="ConnectGravity">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QPushButton" name="CheckConnectionButton">
+                  <property name="text">
+                   <string>Check Connection</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_10">
+                  <property name="text">
+                   <string>FriState_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="1">
+                 <widget class="QPushButton" name="ConnectCmdJntPosFriOffset">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QPushButton" name="ConnectMsrJntPos">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="10" column="1">
+                 <widget class="QPushButton" name="ConnectMsrJntVel">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="11" column="1">
+                 <widget class="QPushButton" name="ConnectMsrJntTrq">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="19" column="0">
+                 <widget class="QLabel" name="label_87">
+                  <property name="text">
+                   <string>JointVelocities_o</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="21" column="0">
+                 <widget class="QLabel" name="label_89">
+                  <property name="text">
+                   <string>CartesianPosition_o</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_9">
+                  <property name="text">
+                   <string>RobotState_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="15" column="1">
+                 <widget class="QPushButton" name="ConnectMassMatrix">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="9" column="0">
+                 <widget class="QLabel" name="label_72">
+                  <property name="text">
+                   <string>CmdCartPosFriOffset_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="0">
+                 <widget class="QLabel" name="label_66">
+                  <property name="text">
+                   <string>CmdJntPosFriOffset_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="0">
+                 <widget class="QLabel" name="label_69">
+                  <property name="text">
+                   <string>MsrCartPos_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="1">
+                 <widget class="QPushButton" name="ConnectCmdJntPos">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QLabel" name="label_64">
+                  <property name="text">
+                   <string>MsrJntPos_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="1">
+                 <widget class="QPushButton" name="ConnectMsrCartPos">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="13" column="1">
+                 <widget class="QPushButton" name="ConnectEstExtTcpWrench">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="20" column="0">
+                 <widget class="QLabel" name="label_88">
+                  <property name="text">
+                   <string>JointTorques_o</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QLabel" name="label_65">
+                  <property name="text">
+                   <string>CmdJntPos_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="0">
+                 <widget class="QLabel" name="label_70">
+                  <property name="text">
+                   <string>CmdCartPos_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="10" column="0">
+                 <widget class="QLabel" name="label_74">
+                  <property name="text">
+                   <string>MsrJntVel_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="12" column="0">
+                 <widget class="QLabel" name="label_78">
+                  <property name="text">
+                   <string>EstExtJntTrq_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="11" column="0">
+                 <widget class="QLabel" name="label_76">
+                  <property name="text">
+                   <string>MsrJntTrq_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="13" column="0">
+                 <widget class="QLabel" name="label_81">
+                  <property name="text">
+                   <string>EstExtTcpWrench_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="14" column="0">
+                 <widget class="QLabel" name="label_82">
+                  <property name="text">
+                   <string>Events_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="15" column="0">
+                 <widget class="QLabel" name="label_83">
+                  <property name="text">
+                   <string>MassMatrix_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="16" column="0">
+                 <widget class="QLabel" name="label_84">
+                  <property name="text">
+                   <string>Jacobian_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="17" column="0">
+                 <widget class="QLabel" name="label_85">
+                  <property name="text">
+                   <string>gravity_i</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QPushButton" name="ConnectFriState">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="18" column="0">
+                 <widget class="QLabel" name="label_86">
+                  <property name="text">
+                   <string>JointPositions_o</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="22" column="0">
+                 <widget class="QLabel" name="label_90">
+                  <property name="text">
+                   <string>CartesianVelocity_o</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="23" column="0">
+                 <widget class="QLabel" name="label_91">
+                  <property name="text">
+                   <string>CartesianWrench_o</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="12" column="1">
+                 <widget class="QPushButton" name="ConnectEstExtJntTrq">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="14" column="1">
+                 <widget class="QPushButton" name="ConnectEvents">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="24" column="0">
+                 <widget class="QLabel" name="label_92">
+                  <property name="text">
+                   <string>desJntImpedance_o</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="18" column="1">
+                 <widget class="QPushButton" name="ConnectJointPosition">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="19" column="1">
+                 <widget class="QPushButton" name="ConnectJointvelocities">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="20" column="1">
+                 <widget class="QPushButton" name="ConnectJointTorques">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="21" column="1">
+                 <widget class="QPushButton" name="ConnectCartesianPosition">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="22" column="1">
+                 <widget class="QPushButton" name="ConnectCartesianVelocity">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="23" column="1">
+                 <widget class="QPushButton" name="ConnectCartesiaWrench">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="24" column="1">
+                 <widget class="QPushButton" name="ConnectdesJntImpedance">
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
             <widget class="QWidget" name="jacobian">
              <attribute name="title">
               <string>Jacobian</string>
@@ -809,8 +1149,8 @@
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>381</width>
-                      <height>447</height>
+                      <width>373</width>
+                      <height>751</height>
                      </rect>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_18">
@@ -1148,8 +1488,8 @@
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>381</width>
-                      <height>447</height>
+                      <width>373</width>
+                      <height>751</height>
                      </rect>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_28">
@@ -2320,6 +2660,53 @@
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="1" column="0">
+               <layout class="QGridLayout" name="gridLayout_45">
+                <item row="0" column="0">
+                 <widget class="QGroupBox" name="groupBox_12">
+                  <property name="title">
+                   <string>Gravity</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_47">
+                   <item row="0" column="0">
+                    <layout class="QGridLayout" name="gridLayout_46">
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="gx">
+                       <property name="text">
+                        <string>gx</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="gy">
+                       <property name="text">
+                        <string>gy</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="gz">
+                       <property name="text">
+                        <string>gz</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
                        </property>
                       </widget>
                      </item>

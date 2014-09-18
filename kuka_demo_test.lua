@@ -293,6 +293,20 @@ SetQdes:connect('2clicked()', app, '1setFRIQdes()')
 lua_interpreter_button = window:findChild("lua_interpreter_button")
 lua_interpreter_button:connect('2clicked()', app, '1exec_lua()')
 
+function updateGravity()
+    local gx = window:findChild("gx")
+    local gy = window:findChild("gy")
+    local gz = window:findChild("gz")
+
+    local g = rtt.Variable("array")
+    g:resize(3)
+    g = kukademo:getGravity()
+
+    gx:setText(QString():setNum(g[0]))
+    gy:setText(QString():setNum(g[1]))
+    gz:setText(QString():setNum(g[2]))
+end
+
 function updateMassMatrix()
     local M00 = window:findChild("MassMatrix00")
     local M01 = window:findChild("MassMatrix01")
@@ -750,7 +764,11 @@ timer:connect('2timeout()', function()
 
         end
     updateMassMatrix()
+
     updateSensor()
+
+    updateGravity()
+
     end
 end)
 timer:start(1000) --msec
