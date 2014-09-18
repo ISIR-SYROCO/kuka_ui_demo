@@ -698,7 +698,7 @@ timer:connect('2timeout()', function()
 
             local jacobian_model = rtt.Variable("array")
             jacobian_model:resize(42)
-            jacobian_model = kukademo:getJacobianModel(6)
+            jacobian_model = kukademo:getJacobianModel(8)
 
             J00_model:setText(QString():setNum(jacobian_model[0]))
             J01_model:setText(QString():setNum(jacobian_model[1]))

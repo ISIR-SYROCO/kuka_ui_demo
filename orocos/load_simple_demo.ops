@@ -20,7 +20,7 @@ cp.lock_policy = LOCKED
 
 connect("lwr.events", "KukaDemo.Events_i", cp)
 connect("lwr.msrJntPos", "KukaDemo.MsrJntPos_i", cp)
-connect("lwr.msrJntVel","KukaDemo.msrJntVel_i",cp)
+connect("lwr.msrJntVel","KukaDemo.MsrJntVel_i",cp)
 connect("lwr.msrCartPos", "KukaDemo.MsrCartPos_i", cp)
 connect("lwr.Jacobian", "KukaDemo.Jacobian_i", cp)
 connect("lwr.massMatrix_o", "KukaDemo.MassMatrix_i", cp)
