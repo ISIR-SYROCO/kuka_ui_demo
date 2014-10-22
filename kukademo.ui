@@ -27,7 +27,7 @@
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-304</y>
+         <y>0</y>
          <width>850</width>
          <height>895</height>
         </rect>
@@ -2681,9 +2681,9 @@
                    <item row="0" column="0">
                     <layout class="QGridLayout" name="gridLayout_46">
                      <item row="0" column="0">
-                      <widget class="QLabel" name="gx">
+                      <widget class="QLabel" name="g0">
                        <property name="text">
-                        <string>gx</string>
+                        <string>g0</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -2691,9 +2691,9 @@
                       </widget>
                      </item>
                      <item row="1" column="0">
-                      <widget class="QLabel" name="gy">
+                      <widget class="QLabel" name="g1">
                        <property name="text">
-                        <string>gy</string>
+                        <string>g1</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -2701,9 +2701,49 @@
                       </widget>
                      </item>
                      <item row="2" column="0">
-                      <widget class="QLabel" name="gz">
+                      <widget class="QLabel" name="g2">
                        <property name="text">
-                        <string>gz</string>
+                        <string>g2</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="6" column="0">
+                      <widget class="QLabel" name="g6">
+                       <property name="text">
+                        <string>g6</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="g3">
+                       <property name="text">
+                        <string>g3</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="0">
+                      <widget class="QLabel" name="g5">
+                       <property name="text">
+                        <string>g5</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="g4">
+                       <property name="text">
+                        <string>g4</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -2716,6 +2756,19 @@
                  </widget>
                 </item>
                </layout>
+              </item>
+              <item row="2" column="0">
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
               </item>
              </layout>
             </widget>
